@@ -1,3 +1,7 @@
+html {
+    cursor: url(../src/images/mata_mosquito.png) 30 30, auto;
+}
+
 /*Background*/
 body {
     background-color: #64846E;

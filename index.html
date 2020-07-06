@@ -13,6 +13,9 @@
 
         <!--Estilo customizado-->
         <link rel="stylesheet" href="css/style.css">
+
+         <!--JavaScript com lógica do jogo-->
+         <script src="js/game_logic.js"></script>
     </head>
 
     <body>
@@ -54,12 +57,14 @@
 
         <script>
             function iniciarJogo(){
-                var nivel = document.getElementById('nivel').value;
+                var nivel = document.getElementById('nivel').value
 
                 if(nivel === ''){
                     alert('Selecione um nível para iniciar o jogo')
                     return false
                 }
+
+                window.location.href = "html/game.html?"+nivel
             }
         </script>
         <!-- Optional JavaScript -->

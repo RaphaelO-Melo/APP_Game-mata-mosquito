@@ -6,6 +6,7 @@ var vidas = 1
 
 //Variaveis referente ao tempo
 var temp = 20
+var tempCriaMosquito = 1500
 var cronometro = setInterval(function(){
 
     temp -= 1
@@ -18,6 +19,17 @@ var cronometro = setInterval(function(){
         document.getElementById('cronometro').innerHTML = temp
     }
 }, 1000)
+
+//Variável que guarda a referencia do nível
+var nivel = window.location.search.replace('?','')
+if(nivel === 'normal'){
+    tempCriaMosquito = tempCriaMosquito
+}else if (nivel === 'dificil'){
+    tempCriaMosquito = 1000
+}else if (nivel === 'muito_dificil'){
+    tempCriaMosquito = 750
+}
+
 
 //Função que atualiza o tamanho da tela do jogo
 function redimensionaTela(){
