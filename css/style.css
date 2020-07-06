@@ -1,3 +1,35 @@
+/*Background*/
+body {
+    background-image: url(../src/images/bg.jpg);
+    background-repeat: no-repeat;
+}
+
+/*Classes da HUD*/
+.painel {
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+
+    border-top: solid 1px #fff;
+    background-color: #fff;
+    opacity: 0.7;
+}
+
+.vidas {
+    float: left;
+}
+
+.cronometro {
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+/*Classes dos mosquitos*/
 .mosquito-pequeno {
     width: 50px;
     height: 50px;
