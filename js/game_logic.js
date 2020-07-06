@@ -1,6 +1,9 @@
 //Variáveis referentes à tela de jogo
 var largura_tela,altura_tela
 
+//Variável referente às vidas do jogador
+var vidas = 1;
+
 //Função que atualiza o tamanho da tela do jogo
 function redimensionaTela(){
     //TODO: Obtém a largura e altura da tela disponível
@@ -17,6 +20,15 @@ function sorteiaPosicao(){
     if(document.getElementById('mosquito')){
         //Se existir, elimina o mosquito
         document.getElementById('mosquito').remove()
+
+        //Remove uma vida do jogador
+        if(vidas > 3) {
+            //Interrompe o jogo
+            alert('fim de jogo')
+        } else {
+            document.getElementById('v' + vidas).src = "src/images/coracao_vazio.png"
+            vidas++;
+        }
     }
 
     //Sorteia um número para x se baseando nos limites da tela e o tamanho da imagem
@@ -47,6 +59,9 @@ function criaMosquito(pos_x, pos_y){
 
     //Define o ID
     mosquito.id = 'mosquito'
+
+    //Define o evento de clique
+    mosquito.onclick = function(){this.remove()}
 
     //Sorteia o tamanho do mosquito
     var tamanho_mosquito = Math.floor(Math.random() * 3)
