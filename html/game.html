@@ -19,11 +19,13 @@
                 <img id="v2" src="../src/images/coracao_cheio.png" alt="Coração">
                 <img id="v3" src="../src/images/coracao_cheio.png" alt="Coração">
             </div>
-            <div class="cronometro">Tempo restante: </div>
+            <div class="cronometro">Tempo restante: <span id="cronometro"></span> </div>
         </div>
 
         <script>
-            setInterval(function(){sorteiaPosicao()}, 1000)
+
+            document.getElementById('cronometro').innerHTML = temp
+            var criaMosquito = setInterval(function(){sorteiaPosicao()}, 1000)
         </script>
     </body>
 </html>

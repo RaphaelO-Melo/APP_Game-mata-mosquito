@@ -2,7 +2,21 @@
 var largura_tela,altura_tela
 
 //Variável referente às vidas do jogador
-var vidas = 1;
+var vidas = 1
+
+//Variaveis referente ao tempo
+var temp = 20
+var cronometro = setInterval(function(){
+
+    temp -= 1
+
+    if(temp < 0){
+        clearInterval(cronometro)
+        clearInterval(criaMosquito)
+    }else {
+        document.getElementById('cronometro').innerHTML = temp
+    }
+}, 1000)
 
 //Função que atualiza o tamanho da tela do jogo
 function redimensionaTela(){
@@ -41,11 +55,11 @@ function sorteiaPosicao(){
     pos_y = pos_y < 0 ? 0 : pos_y
 
     //Cria o mosquito nessa posição sorteada
-    criaMosquito(pos_x, pos_y);
+    criaIMGMosquito(pos_x, pos_y);
 }
 
 //Função que cria um mosquito com base em um valor x e y
-function criaMosquito(pos_x, pos_y){
+function criaIMGMosquito(pos_x, pos_y){
     //Cria o objeto imagem e associa a uma variável
     var mosquito = document.createElement('img')
 

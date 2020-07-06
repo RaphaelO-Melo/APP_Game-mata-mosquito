@@ -1,7 +1,6 @@
 /*Background*/
 body {
-    background-image: url(../src/images/bg.jpg);
-    background-repeat: no-repeat;
+    background-color: #64846E;
 }
 
 /*Classes da HUD*/
