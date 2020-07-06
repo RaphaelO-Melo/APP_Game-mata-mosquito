@@ -24,9 +24,9 @@ function sorteiaPosicao(){
         //Remove uma vida do jogador
         if(vidas > 3) {
             //Interrompe o jogo
-            alert('fim de jogo')
+            window.location.href = 'game_over.html'
         } else {
-            document.getElementById('v' + vidas).src = "src/images/coracao_vazio.png"
+            document.getElementById('v' + vidas).src = "../src/images/coracao_vazio.png"
             vidas++;
         }
     }
@@ -51,7 +51,7 @@ function criaMosquito(pos_x, pos_y){
 
     //Após a criação, edita os atributos
     //Define o caminho
-    mosquito.src = 'src/images/mosquito.png'
+    mosquito.src = '../src/images/mosquito.png'
 
     //Define a posição x e y
     mosquito.style.left = pos_x + 'px'
@@ -103,5 +103,3 @@ function criaMosquito(pos_x, pos_y){
 
 //Atualiza tamanho da tela
 redimensionaTela();
-
-
