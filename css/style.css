@@ -18,3 +18,11 @@
 
     position: absolute;
 }
+
+.lado-a {
+    transform: scaleX(1);
+}
+
+.lado-b {
+    transform: scaleX(-1);
+}
