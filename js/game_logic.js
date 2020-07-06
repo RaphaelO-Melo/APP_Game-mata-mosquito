@@ -13,9 +13,9 @@ function redimensionaTela(){
 //Função que sorteia uma posição para o mosquito
 function sorteiaPosicao(){
     //Sorteia um número para x se baseando nos limites da tela e o tamanho da imagem
-    var pos_x = Math.floor(Math.random() * largura_tela) - 50;
+    var pos_x = Math.floor(Math.random() * largura_tela) - 90;
     //Sorteia um número para y se baseando nos limites da tela e o tamanho da imagem
-    var pos_y = Math.floor(Math.random() * altura_tela) - 50;
+    var pos_y = Math.floor(Math.random() * altura_tela) - 90;
 
     //Verifica se os valores são menores que zero para tratar
     pos_x = pos_x < 0 ? 0 : pos_x
@@ -34,12 +34,27 @@ function criaMosquito(pos_x, pos_y){
 
     //Define o caminho
     mosquito.src = 'src/images/mosquito.png'
-    //Define a classe
-    mosquito.className = 'mosquito_1'
 
     //Define a posição x e y
     mosquito.style.left = pos_x + 'px'
     mosquito.style.top = pos_y + 'px'
+
+    //Sorteia o tamanho do mosquito
+    var tamanho_mosquito = Math.floor(Math.random() * 3)
+    switch(tamanho_mosquito){
+        case 0:
+            //Define a classe
+            mosquito.className = 'mosquito-pequeno'
+            break
+        case 1:
+            //Define a classe
+            mosquito.className = 'mosquito-medio'
+            break
+        case 2:
+            //Define a classe
+            mosquito.className = 'mosquito-grande'
+            break
+    }
 
     //Adiciona o elemento ao body
     document.body.appendChild(mosquito)
